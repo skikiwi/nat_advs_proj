@@ -1,6 +1,7 @@
 imagenet-a-split/
 imagenet-a/
 imagenet-a-split.zip
+*.keras
 
 
 # Byte-compiled / optimized / DLL files
