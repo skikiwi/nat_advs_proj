@@ -26,7 +26,7 @@ def preproc(tensor, y):
 
     return tensor, y
 
-normalized_ds = test_dataset.map(preproc).batch(batch_size)
+test_dataset = test_dataset.map(preproc).batch(batch_size)
 
 base_model = ResNet50(include_top=True, weights='imagenet', input_tensor=None, input_shape=None, pooling='avg')
 
