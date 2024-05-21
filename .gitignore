@@ -1,5 +1,6 @@
 imagenet-a-split/
 imagenet-a/
+ImageNet-Mini/
 imagenet-a-split.zip
 *.keras
 
