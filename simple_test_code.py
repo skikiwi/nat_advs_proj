@@ -11,7 +11,7 @@ all_wnids = ['n01440764', 'n01443537', 'n01484850', 'n01491361', 'n01494475', 'n
 
 
 # link to parent folder of all the classes
-test_dir = "/directory/of/mini-imagenet"
+test_dir = "C:/Users/laure/Documents/nat_advs_proj/ImageNet-Mini/images"
 
 # establish dataset, class_names defined by all_wnids
 batch_size = 32
@@ -21,7 +21,7 @@ test_dataset = tf.keras.preprocessing.image_dataset_from_directory(test_dir, lab
 # Define the preprocessing function
 def preproc(tensor, y):
     # image processing
-    tensor = tf.image.random_crop(tensor, size=(224, 224, 3))
+    tensor = tf.image.resize_with_crop_or_pad(tensor, 224, 224)
     tensor = preprocess_input(tensor)
 
     return tensor, y
